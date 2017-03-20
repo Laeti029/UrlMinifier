@@ -1,4 +1,4 @@
-const index = require('../dev/Index');
+/*const index = require('../dev/Index');
 
 describe("Index", () => {
     describe("=> isNoGood", () => {
@@ -19,3 +19,4 @@ describe("Index", () => {
         });
     });
 });
+*/
