@@ -3,7 +3,7 @@ const index = require('../dev/Index');
 describe("Index", () => {
     describe("=> isNoGood", () => {
         it("Should return false", next => {
-            let result = index();
+            let result = index.isNoGood(1);
 
             expect(result).toBeFalsy();
 
@@ -11,7 +11,7 @@ describe("Index", () => {
         });
 
         it("Should return true", next => {
-            let result = index();
+            let result = index.isNoGood(3);
 
             expect(result).toBeTruthy();
 

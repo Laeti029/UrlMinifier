@@ -1,5 +1,9 @@
 module.exports = {
-  isNoGood => {
-    return false;
+  isNoGood: (value) => {
+    if (value === 1) {
+      return false;
+    } else {
+      return true
+    }
   }
 };
