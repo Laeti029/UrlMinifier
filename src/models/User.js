@@ -1,34 +1,36 @@
 class User {
-	constructor(id=undefined, email=undefined, password=undefined) {
-		this.id = id;
-		this.email = email;
-		this.password = password;
-	}
+    constructor(id = undefined, email = undefined, password = undefined) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+    }
 
-	getId(){
-		return this.id;
-	}
+    getId() {
+        return this.id;
+    }
 
-	setId(id) {
-		this.id = id;
-		return this; 
-	}
+    setId(id) {
+        this.id = id;
+        return this;
+    }
 
-    getEmail(){
+    getEmail() {
         return this.email;
     }
 
     setEmail(email) {
         this.email = email;
-        return this; 
+        return this;
     }
 
-    getPassword(){
+    getPassword() {
         return this.password;
     }
 
     setPassword(password) {
         this.password = password;
-        return this; 
+        return this;
     }
 }
+
+module.exports = User;

@@ -1,6 +1,6 @@
 class Url {
 
-    constructor(id = undifined, baseUrl = undifined, minifierUrl = undifined) {
+    constructor(id = undefined, baseUrl = undefined, minifierUrl = undefined) {
         this.baseUrl = baseUrl;
         this.minifierUrl = minifierUrl;
     }
@@ -28,8 +28,7 @@ class Url {
         return this;
     }
 
-
-
-
-
 }
+
+
+module.exports = Url;
