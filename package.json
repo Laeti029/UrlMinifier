@@ -1,0 +1,19 @@
+{
+  "name": "urlminifier",
+  "version": "1.0.0",
+  "description": "Projet fil rouge CDPN/DL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laeti029/UrlMinifier.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laeti029/UrlMinifier/issues"
+  },
+  "homepage": "https://github.com/Laeti029/UrlMinifier#readme"
+}
