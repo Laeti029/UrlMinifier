@@ -1,22 +1,8 @@
-/*const index = require('../dev/Index');
+var calculator = require("../controllers/indexCtrl");
 
-describe("Index", () => {
-    describe("=> isNoGood", () => {
-        it("Should return false", next => {
-            let result = index();
-
-            expect(result).toBeFalsy();
-
-            next();
-        });
-
-        it("Should return true", next => {
-            let result = index();
-
-            expect(result).toBeTruthy();
-
-            next();
-        });
-    });
-});
-*/
+describe("multiplication", function () {
+  it("should multiply 2 and 3", function () {
+    var product = calculator.multiply(2, 3);
+    expect(product).toBe(15);
+  });
+});    
