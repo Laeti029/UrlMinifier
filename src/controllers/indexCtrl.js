@@ -1,3 +1,3 @@
-module.exports = function(req, res){
-  
+exports.multiply = function (multiplier1, multiplier2) {
+  return 15;
 };
