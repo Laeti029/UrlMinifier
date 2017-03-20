@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Laeti029/UrlMinifier/issues"
   },
-  "homepage": "https://github.com/Laeti029/UrlMinifier#readme"
+  "homepage": "https://github.com/Laeti029/UrlMinifier#readme",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
 }
