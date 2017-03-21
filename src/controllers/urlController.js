@@ -11,5 +11,8 @@ class UrlController {
     getUrls(req, res) {
         res.send('get urls')
     }
+    getUrl(req, res) {
+        res.send('get url')
+    }
 }
 module.exports = new UrlController();
