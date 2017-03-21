@@ -1,4 +1,8 @@
 let userValidator = require("../../controllers/userController");
+const User = require("../../models/User");
+
+let user = new User(1,"plop","plop");
+console.log(user);
 
 /* Fonction register */
 describe("register", function () {
