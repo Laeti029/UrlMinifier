@@ -27,7 +27,7 @@ describe("emailValidator", function () {
 /* Fonction passwordValidator */
 describe("passwordValidator", function () {
   it("Test de la fonction passwordValidator - Cas Nominal", function () {
-    let password = "Test123456789";
+    let password = "Test123456789#";
 
     let verification = userValidator.passwordValidator(password);
     expect(verification).toBe(true);
