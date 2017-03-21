@@ -1,16 +1,24 @@
-let userController = require("../../controllers/userController");
-const User = require("../../models/User");
+const userController = require("../../controllers/userController");
+const UserModel = require("../../models/User");
 
 
 /* Fonction register */
 describe("register", function () {
+  let user = new UserModel(0, "test@test.fr", "Test123456789");    
+
   it("Test de la fonction register - cas nominal", function () {
-    let uc = new userController();
-    let user = new User(1,"plop","plop");
-    console.log(user.setId(2));
-    let result = register.length > 20;
-    expect(result).toBe(false);
+    let req = {}, res = {};
+    req.body = {};
+
+    spyOn(user, "setEmail");
+
+    req.body.email = "test@test.fr";
+    req.body.password = "Test123456789";
+    
+    userController.registerAction(req, res);    
+    expect(user.setEmail).toHaveBeenCalled();
   });
+});
 /*
   it("Test de la fonction register - email manquant", function () {
     let register = registerAction();
@@ -23,7 +31,6 @@ describe("register", function () {
     let result = register.length > 20;
     expect(result).toBe(false);
   });*/
-});
 
 /* Fonction connect */
 /*describe("connect", function () {
