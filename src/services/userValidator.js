@@ -7,7 +7,14 @@ module.exports = {
     }
   },
   passwordValidator(password) {
-    if (email === "1233456") {
+    if (password === "1233456") {
+      return true;
+    } else {
+      return false;
+    }
+  },
+  register(email, password) {
+    if (passwordValidator(password) && emailValidator(password)){
       return true;
     } else {
       return false;
