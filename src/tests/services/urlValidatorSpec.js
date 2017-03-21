@@ -13,6 +13,17 @@ describe('Test de la fonction inputUrlValidator', () => {
     let verification = urlValidator.inputUrlValidator(url);
     expect(verification).to.equal(false);
   });
+  it(' => Cas de mauvais protocole', () => {
+    let url = "ftp://mega.up"
 
+    let verification = urlValidator.inputUrlValidator(url);
+    expect(verification).to.equal(false);
+  });
+  it(' => Cas de caractère interdit', () => {
+    let url = "http://www.;/&=+$#@.fr"
+
+    let verification = urlValidator.inputUrlValidator(url);
+    expect(verification).to.equal(false);
+  });
 
 });
