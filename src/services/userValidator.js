@@ -2,7 +2,7 @@ module.exports = {
   emailValidator: function () {
     return true;
   },
-  userValidator: function () {
+  passwordValidator: function () {
     return true;
   }
 };
