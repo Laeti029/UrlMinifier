@@ -8,9 +8,7 @@ class UrlController {
     removeUrl(req, res) {
         res.send('remove Url')
     }
-    getUrls(req, res) {
-        res.send('get urls')
-    }
+
     getUrl(req, res) {
         res.send('get url')
     }
