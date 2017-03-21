@@ -1,10 +1,10 @@
 'use strict';
-
-const express = require("express");
-
 import { Server } from 'http';
 
+const express = require("express");
+const userRouter = require('../routes/userRouter');
 const MongoClient = require('mongodb').MongoClient
+
 
 let app = express();
 let bodyParser= require('body-parser')
@@ -21,6 +21,7 @@ MongoClient.connect('mongodb://root:Password1234@ds137370.mlab.com:37370/urlmini
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
+app.use(userRouter);
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
