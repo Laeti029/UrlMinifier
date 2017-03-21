@@ -1,3 +1,3 @@
-require("babel-core/register");
+//require("babel-core/register");
 
 require('./src/server.js');

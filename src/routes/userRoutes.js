@@ -1,5 +1,7 @@
+const express = require("express");
 const userRouter = express.Router();
-const UrlController = require('../controllers/UserController');
+const UserController = require('../controllers/userController');
+let bodyParser= require('body-parser')
 let jsonParser = bodyParser.json();
 
 userRouter.post('/register', UserController.registerAction);

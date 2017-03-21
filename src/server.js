@@ -1,8 +1,8 @@
 'use strict';
-import { Server } from 'http';
-
+//import { Server } from 'http';
+const Server = require('http')
 const express = require("express");
-const userRouter = require('../routes/userRouter');
+const userRouter = require('./routes/userRoutes');
 const MongoClient = require('mongodb').MongoClient
 
 
