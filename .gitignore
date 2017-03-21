@@ -3,3 +3,4 @@ node_modules
 *.log
 src/public/vendor
 *.swp
+.vscode
