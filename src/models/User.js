@@ -1,16 +1,16 @@
 class User {
-    constructor(id = undefined, email = undefined, password = undefined) {
-        this.id = id;
+    constructor(id, email, password) {
+        this._id = id;
         this.email = email;
         this.password = password;
     }
 
     getId() {
-        return this.id;
+        return this._id;
     }
 
     setId(id) {
-        this.id = id;
+        this._id = id;
         return this;
     }
 
