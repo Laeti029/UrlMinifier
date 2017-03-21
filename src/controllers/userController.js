@@ -1,7 +1,7 @@
 // UserController
 user = require('../models/User.js')
 
-class UserController
+module.exports = class UserController
 {
   registerAction(req,res) {
     let post = req.body;
@@ -22,5 +22,8 @@ class UserController
 
     res.redirect(/* App View Home */)
 
+  }
+  register(){
+    return true;
   }
 }
