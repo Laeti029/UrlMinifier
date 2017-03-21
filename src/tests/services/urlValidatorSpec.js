@@ -10,9 +10,9 @@ describe('Test de la fonction inputUrlValidator', () => {
   it(' => Cas input null', () => {
     let url = "";
 
-    let verification = urlValidator.inputUrlValidator(url):
+    let verification = urlValidator.inputUrlValidator(url);
     expect(verification).to.equal(false);
   });
-  
+
 
 });
