@@ -8,22 +8,22 @@ class Url {
     getId() {
         return this._id;
     }
-    setId() {
-        this._id = value;
+    setId(id) {
+        this._id = id;
         return this;
     }
 
     getBaseUrl() {
         return this.baseUrl;
     }
-    setBaseUrl() {
-        this.baseUrl = value;
+    setBaseUrl(url) {
+        this.baseUrl = url;
         return this;
     }
     getMinifierUrl() {
         return this.minifierUrl;
     }
-    setMinifierUrl() {
+    setMinifierUrl(value) {
         this.minifierUrl = value;
         return this;
     }
