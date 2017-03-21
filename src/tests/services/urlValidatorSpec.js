@@ -1,11 +1,11 @@
 const urlValidator = require('../../services/urlValidator');
 
 describe('Test de la fonction inputUrlValidator', () => {
-  it(' => Cas nominal', () => {
+  it(' => Cas URL bien formée', () => {
     let url = "http://www.wellformedurl.com";
 
     let verification = urlValidator.inputUrlValidator(url);
-    expect(verification).toBe(false);
+    expect(verification).toBe(true);
   });
   it(' => Cas input null', () => {
     let url = "";
