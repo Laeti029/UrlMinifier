@@ -1,11 +1,4 @@
 module.exports = {
-<<<<<<< HEAD
-  emailValidator: function () {
-    return true;
-  },
-  passwordValidator: function () {
-    return true;
-=======
   emailValidator: function (email) {
     if (email != "") {
       return true;
@@ -26,6 +19,8 @@ module.exports = {
     } else {
       return false;
     }
->>>>>>> develop
+  },
+  login(email, password) {
+    
   }
 };
