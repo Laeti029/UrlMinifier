@@ -7,6 +7,7 @@ import { Server } from 'http';
 const MongoClient = require('mongodb').MongoClient
 
 let app = express();
+let bodyParser= require('body-parser')
 let http = Server(app);
 let db;
 
@@ -18,7 +19,7 @@ MongoClient.connect('mongodb://root:Password1234@ds137370.mlab.com:37370/urlmini
   })
 })
 
-
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
