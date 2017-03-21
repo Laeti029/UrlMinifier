@@ -5,7 +5,7 @@ class UserController
 {
   registerAction(req,res) {
     let post = req.body;
-    let userEntity = new userEntity();
+    let user = new userEntity();
 
     user.setEmail(post.email);
     user.setPassword(post.password);
