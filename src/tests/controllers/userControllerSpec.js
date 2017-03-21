@@ -1,4 +1,4 @@
-let userValidator = require("../services/userController");
+let userValidator = require("../../controllers/userController");
 
 /* Fonction register */
 describe("register", function () {
