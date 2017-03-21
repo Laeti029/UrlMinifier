@@ -1,5 +1,5 @@
 // UserController
-userEntity = require('./models/UserEntity.js')
+user = require('./models/Users.js')
 
 class UserController
 {
@@ -7,18 +7,18 @@ class UserController
     let post = req.body;
     let userEntity = new userEntity();
 
-    userEntity.setEmail(post.email);
-    userEntity.setPassword(post.password);
+    user.setEmail(post.email);
+    user.setPassword(post.password);
 
     res.redirect(/* App View login */)
   }
 
   connectAction(req,res) {
     let post = req.body;
-    let userEntity = new userEntity();
+    let user = new userEntity();
 
-    userEntity.setEmail(post.email);
-    userEntity.setPassword(post.password);
+    user.setEmail(post.email);
+    user.setPassword(post.password);
 
     res.redirect(/* App View Home */)
 
