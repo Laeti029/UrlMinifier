@@ -1,15 +1,15 @@
 class Url {
 
-    constructor(id = undefined, baseUrl = undefined, minifierUrl = undefined) {
+    constructor(id, baseUrl, minifierUrl) {
         this.baseUrl = baseUrl;
         this.minifierUrl = minifierUrl;
     }
 
     getId() {
-        return this.id;
+        return this._id;
     }
     setId() {
-        this.id = value;
+        this._id = value;
         return this;
     }
 
