@@ -8,4 +8,4 @@ router.get('/url/:id(\\d+)', UrlController.getUrl);
 router.get('/url', UrlController.getUrls);
 
 
-module.exports = router;
+module.exports = urlRouter;
