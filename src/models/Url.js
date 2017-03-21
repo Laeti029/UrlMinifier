@@ -1,34 +1,12 @@
-class Url {
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-    constructor(id, baseUrl, minifierUrl) {
-        this.baseUrl = baseUrl;
-        this.minifierUrl = minifierUrl;
-    }
+var urlSchema = new Schema({
+    url: string,
+    urlminify: string,
+    userId: string,
+});
 
-    getId() {
-        return this._id;
-    }
-    setId() {
-        this._id = value;
-        return this;
-    }
+var Url = mongoose.model('Url', urlSchema);
 
-    getBaseUrl() {
-        return this.baseUrl;
-    }
-    setBaseUrl() {
-        this.baseUrl = value;
-        return this;
-    }
-    getMinifierUrl() {
-        return this.minifierUrl;
-    }
-    setMinifierUrl() {
-        this.minifierUrl = value;
-        return this;
-    }
-
-}
-
-
-module.exports = Url;
+module.exports = url;
