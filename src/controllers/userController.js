@@ -1,5 +1,5 @@
 // UserController
-user = require('./models/Users.js')
+user = require('../models/User.js')
 
 class UserController
 {
