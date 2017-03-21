@@ -1,7 +1,7 @@
 // UserController
 user = require('../models/User.js')
 
-module.exports = class UserController
+class UserController
 {
   registerAction(req,res) {
     let post = req.body;
@@ -27,3 +27,5 @@ module.exports = class UserController
     return true;
   }
 }
+
+module.exports = UserController;
