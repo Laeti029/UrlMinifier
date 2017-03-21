@@ -23,4 +23,9 @@ class UserController
     res.redirect(/* App View Home */)
 
   }
+  register(){
+    return true;
+  }
 }
+
+module.exports = UserController;
