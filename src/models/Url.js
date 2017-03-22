@@ -2,11 +2,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var urlSchema = new Schema({
-    url: string,
-    urlminify: string,
-    userId: string,
+    url: String,
+    urlMinify: String,
+    userId: String,
 });
 
 var Url = mongoose.model('Url', urlSchema);
 
-module.exports = url;
+module.exports = Url;
