@@ -36,9 +36,17 @@ describe('La fonction encode', () => {
 });
 
 // Test de la fonction addUrl
+/**
 describe('La fonction addUrl', () => {
-  it(' doit ', () => {
-
+  it(' doit renvoyer une response valide', () => {
+    const body = {
+      base: "http://www.wellformedurl.com"
+    }
+    const response = {
+      data: true,
+      errors: []
+    }
+    let verification = urlService.addUrl(body, res);
   });
 });
 

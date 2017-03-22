@@ -22,6 +22,12 @@ describe('emailValidator', function () {
     let verification = userService.emailValidator(email);
     expect(verification).toBe(false);
   });
+  it('Test de la fonction emailValidator - Cas OK', function () {
+    let email = "email@email.com";
+
+    let verification = userService.emailValidator(email);
+    expect(verification).toBe(true);
+  });
 });
 
 /* Fonction passwordValidator */
@@ -69,7 +75,7 @@ describe('addUser', function () {
 
     userService.addUser(body, (result) => {
       expect(result.data).toBe(false);
-      expect(result.errors.length).toBe(2);      
+      expect(result.errors.length).toBe(2);
     });
   });
 
@@ -94,7 +100,7 @@ describe('addUser', function () {
       password: "test"
     };
 
-    userService.getUser(body, (data) => {      
+    userService.getUser(body, (data) => {
       console.log(data);
       expect(data).toBe(true);
     });
