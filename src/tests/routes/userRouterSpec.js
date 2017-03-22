@@ -1,4 +1,4 @@
-const request = require('supertest');
+/*const request = require('supertest');
 const express = require('express');
 
 const app = express();
@@ -12,3 +12,4 @@ describe('GET /register', function() {
       .expect(200, done);
   });
 });
+*/

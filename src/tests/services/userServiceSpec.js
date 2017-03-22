@@ -56,8 +56,8 @@ describe('addUser', function () {
       password: "Test123456789#"
     };
 
-    userService.addUser(body, (data) => {
-      expect(data.result).toBe(true);
+    userService.addUser(body, (result) => {
+      expect(result.data).toBe(true);
     });
   });
 
@@ -67,9 +67,9 @@ describe('addUser', function () {
       password: ""
     };
 
-    userService.addUser(body, (data) => {
-      expect(data.result).toBe(false);
-      expect(data.errors.length).toBe(2);      
+    userService.addUser(body, (result) => {
+      expect(result.data).toBe(false);
+      expect(result.errors.length).toBe(2);      
     });
   });
 
@@ -79,9 +79,9 @@ describe('addUser', function () {
       password: "datagezgzgz484"
     };
 
-    userService.addUser(body, (data) => {
-      expect(data.result).toBe(false);
-      expect(data.errors.length).toBe(1);
+    userService.addUser(body, (result) => {
+      expect(result.data).toBe(false);
+      expect(result.errors.length).toBe(1);
     });
   });
 

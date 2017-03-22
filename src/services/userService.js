@@ -34,10 +34,9 @@ const passwordValidator = (password) => {
  * @param {Function} callback 
  */
 const addUser = (body, done) => {
-  console.log(body);
   let user = new User();
   let response = {
-    result: true,
+    data: true,
     errors: []
   };
 
@@ -46,15 +45,15 @@ const addUser = (body, done) => {
 
   if (!emailValidator(user.email)) {
     response.errors.push("L'email ne respecte pas les normes");
-    response.result = false;
+    response.data = false;
   }
 
   if (!passwordValidator(user.password)) {
     response.errors.push("Le mot de passe ne respecte pas les normes");
-    response.result = false;
+    response.data = false;
   }
 
-  if (response.result) {
+  if (response.data) {
     user.save((err) => {
       if (err)
         result.errors.push(err);

@@ -4,7 +4,7 @@ const userService = require('../services/userService')
 const registerAction = (req, res) => {
 
   userService.addUser(req.body, (response) => {
-    if (response.result) {
+    if (response.data) {
       res.status(200);
     } else {
       res.status(500);
