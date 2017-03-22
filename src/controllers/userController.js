@@ -1,31 +1,31 @@
 // UserController
-user = require('./models/Users.js')
+const userService = require('../services/userService')
 
-class UserController
-{
-  registerAction(req,res) {
-    let post = req.body;
-    let user = new userEntity();
+const registerAction = (req, res) => {
 
-    user.setEmail(post.email);
-    user.setPassword(post.password);
+  userService.addUser(req.body, (response) => {
+    if (response.result) {
+      res.status(200);
+    } else {
+      res.status(500);
+    }
 
-    res.redirect(/* App View login */)
-  }
+    res.json(response);
+  });
+};
 
-  connectAction(req,res) {
-    let post = req.body;
-    let user = new userEntity();
+const connectAction = (req, res) => {
 
-    user.setEmail(post.email);
-    user.setPassword(post.password);
+  userService.getUser(req.body, (user) => {
+    if (user) {
+      res.json(user);
+    } else {
+      res.sendStatus(500);
+    }
+  });
+};
 
-    res.redirect(/* App View Home */)
-
-  }
-
-  register(email, password){
-    return true
-  }
-
-}
+module.exports = {
+  registerAction,
+  connectAction
+};

@@ -1,9 +1,12 @@
 module.exports = {
   inputUrlValidator: function (url) {
-    return true;
+    if(url === '^https?:\/\/(w{3}\.)?[\w-]{1,}\.[a-z]{1,}(\/?[\w-=?_.]{1,})*'){
+        return true; 
+    }
+      return false;
   },
 
-  urlMinifierValidator: function (url){
+  urlMinifierValidator: function(url){
     return true;
   },
 
@@ -12,11 +15,10 @@ module.exports = {
   },
 
   getUrl: function(){
-    return true;
+    return list;
   },
 
   removeUrl: function(id){
-
+    return true;
   },
-  
 }
