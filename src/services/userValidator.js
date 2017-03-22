@@ -14,13 +14,13 @@ module.exports = {
     } else {
       return false;
     }
-  }
+  },
 
   register: function(email, password) {
   	// insert new user in mongodb
-  }
+  },
 
   login: function(email, password) {
   	// search for user in mongodb by email
-  }
+  },
 };
