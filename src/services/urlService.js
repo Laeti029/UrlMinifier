@@ -56,7 +56,7 @@ const encodeUrl = (num) => {
   return encoded;
 };
 
-const getUrl() = () =>{
+const getUrl = () =>{
 
 };
 
