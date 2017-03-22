@@ -52,18 +52,26 @@ const encodeUrl = (num) => {
     num = Math.floor(num / base);
     encoded = alphabet[remainder].toString() + encoded;
   }
-  console.log(encoded);
+//  console.log(encoded);
   return encoded;
 };
 
-const getUrl = () =>{
-
+const getUrl = (body, response) =>{
+  Url.find({}, (err, foundUrls) => {
+    if(!err && foundUrls) {
+      response(foundUrls);
+    } else {
+      console.log('Urls not found');
+      response(false);
+    };
+  });
 };
 
 module.exports = {
   inputUrlValidator,
   addUrl,
-  encodeUrl
+  encodeUrl,
+  getUrl
 }
 
 

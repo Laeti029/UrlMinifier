@@ -9,6 +9,7 @@ const app = express();
 
 // Router
 const userRouter = require('./routes/userRouter');
+const urlRouter = require('./routes/urlRouter');
 
 // MongoDB
 mongoose.Promise = global.Promise;
@@ -22,6 +23,7 @@ mongoose.connect('mongodb://root:Password1234@ds137370.mlab.com:37370/urlminifie
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(userRouter);
+app.use(urlRouter);
 
 app.listen(8080, () => {
   console.log(`Application listening on port 8080`);

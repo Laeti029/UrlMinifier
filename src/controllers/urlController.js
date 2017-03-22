@@ -1,4 +1,5 @@
-const urlService = require('../services/UrlService');
+const express = require("express");
+const urlService = require('../services/urlService')
 
 const addUrlAction = (req, res) => {
     urlService.addUrl(req.body, (response) => {
@@ -11,13 +12,13 @@ const addUrlAction = (req, res) => {
     });
 };
 
-const removeUrlAction (req, res) => {
+const removeUrlAction = (req, res) => {
     urlService.removeUrl(req.body, (url) => {
 
     });
 };
 
-const getUrlAction (req, res) => {
+const getUrlAction = (req, res) => {
     urlService.getUrl(req.body, (url) => {
         if (url) {
             res.json(url);
