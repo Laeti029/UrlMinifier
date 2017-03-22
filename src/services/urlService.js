@@ -25,7 +25,7 @@ const addUrl = (body, done) => {
   };
 
   url.urlBase = body.urlBase;
-  url.userId = body.userId;
+  url.userId = "";
   url.urlMinify = encodeUrl(num);  
 
   if(!inputUrlValidator(url.urlBase)) {
