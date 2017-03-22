@@ -1,11 +1,11 @@
-const router = express.Router();
-const UrlController = require('../controllers/UrlController');
+const urlRouter = express.Router();
+const urlController = require('../controllers/urlController');
 let jsonParser = bodyParser.json();
 
-router.post('/url', UrlController.addUrl);
-router.delete('/url/:id(\\d+)', UrlController.removeUrl);
-router.get('/url/:id(\\d+)', UrlController.getUrl);
-router.get('/url', UrlController.getUrls);
+urlRouter.post('/url', urlController.addUrlAction);
+urlRouter.delete('/url/:id(\\d+)', urlController.removeUrlAction);
+urlRouter.get('/url/:id(\\d+)', urlController.getUrlAction);
+urlRouter.get('/url', urlController.getUrl);
 
 
 module.exports = urlRouter;
