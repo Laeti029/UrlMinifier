@@ -25,8 +25,8 @@ const addUrl = (body, done) => {
   };
 
   url.urlBase = body.urlBase;
-  url.urlMinify = encodeUrl(num);
-  url.userId = "";
+  url.userId = body.userId;
+  url.urlMinify = encodeUrl(num);  
 
   if(!inputUrlValidator(url.urlBase)) {
     response.errors.push("L'url n'est pas valide");
