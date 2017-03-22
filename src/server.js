@@ -19,7 +19,7 @@ mongoose.connect('mongodb://root:Password1234@ds137370.mlab.com:37370/urlminifie
   })
 })
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(userRouter);
 

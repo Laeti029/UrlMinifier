@@ -45,7 +45,6 @@ const addUrl = (body, done) => {
   }
 };
 
-
 const encodeUrl = (num) => {
   var encoded = '';
   while (num){
@@ -57,6 +56,9 @@ const encodeUrl = (num) => {
   return encoded;
 };
 
+const getUrl() = () =>{
+
+};
 
 module.exports = {
   inputUrlValidator,
