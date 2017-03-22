@@ -4,7 +4,7 @@
   "description": "Projet fil rouge CDPN/DL",
   "main": "src",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node spec",
+    "test": "./node_modules/.bin/jasmine-node src/tests",
     "start": "nodemon app.js"
   },
   "repository": {
