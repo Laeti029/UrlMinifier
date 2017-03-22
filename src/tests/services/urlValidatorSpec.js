@@ -1,5 +1,5 @@
 const urlValidator = require('../../services/urlValidator');
-
+/*
 describe('Test de la fonction inputUrlValidator', () => {
   it(' => Cas URL bien formée', () => {
     let url = "http://www.wellformedurl.com";
@@ -27,3 +27,4 @@ describe('Test de la fonction inputUrlValidator', () => {
   });
 
 });
+*/
