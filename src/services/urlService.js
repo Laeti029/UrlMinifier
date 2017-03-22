@@ -1,5 +1,8 @@
 const Url = require('../models/Url');
+const alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
+const base = alphabet.length; // base is the length of the alphabet (58 in this case)
 
+var num = 1000;
 
 const inputUrlValidator = (url) => {
     let result = false;
@@ -10,13 +13,54 @@ const inputUrlValidator = (url) => {
     return result;
 };
 
+/**
+ * Permet l'ajout d'une url
+ * @param {Object} body 
+ * @param {Function} callback 
+ */
+const addUrl = (body, done) => {
+  let url = new Url();
+  let response = {
+    data: true,
+    errors: []
+  };
+
+  url.baseUrl = body.baseUrl;
+  url.minifyUrl = encodeUrl(num);
+
+  if(!inputUrlValidator(url.baseUrl)) {
+    response.errors.push("L'url n'est pas valide");
+    response.data = false;
+  }; 
+  
+  if (response.data) {
+    url.save((err) => {
+      if (err)
+        result.errors.push(err);
+
+      done(response);
+    });
+  } else {
+    done(response);
+  }
+};
 
 
-
+const encodeUrl = (num) => {
+  let encoded = '';
+  while (num){
+    let remainder = num % base;
+    num = Math.floor(num / base);
+    encoded = alphabet[remainder].toString() + encoded;
+  }
+  num += 1;
+  return encoded;
+};
 
 
 module.exports = {
-  inputUrlValidator
+  inputUrlValidator, 
+  addUrl
 }
 
 
