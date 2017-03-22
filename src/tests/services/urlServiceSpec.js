@@ -1,5 +1,11 @@
 const urlService = require('../../services/urlService');
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 describe('Test fonction inputUrlValidator', () => {
   it('doit accepter une url bien formée', () => {
     let url = "https://www.wellformedurl.com";
@@ -20,6 +26,21 @@ describe('Test fonction inputUrlValidator', () => {
   });
 });
 
+// Test de la fonction encode()
+describe('La fonction encode', () => {
+  it(' doit accepter un Int en entrée', () => {
+    let num = getRandomInt(100, 15000);
+    let verification = urlService.encodeUrl(num);
+    expect(verification).toMatch(/\w+/);
+  });
+});
+
+// Test de la fonction addUrl
+describe('La fonction addUrl', () => {
+  it(' doit ', () => {
+
+  });
+});
 
 /*
 describe('Test de la fonction inputUrlValidator', () => {
