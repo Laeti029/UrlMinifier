@@ -7,6 +7,5 @@ var urlSchema = new Schema({
     userId: String,
 });
 
-var Url = mongoose.model('Url', urlSchema);
 
-module.exports = Url;
+module.exports = mongoose.model('Url', urlSchema);
