@@ -24,10 +24,11 @@ const addUrl = (body, done) => {
     errors: []
   };
 
-  url.baseUrl = body.baseUrl;
-  url.minifyUrl = encodeUrl(num);
+  url.urlBase = body.urlBase;
+  url.urlMinify = encodeUrl(num);
+  url.userId = "";
 
-  if(!inputUrlValidator(url.baseUrl)) {
+  if(!inputUrlValidator(url.urlBase)) {
     response.errors.push("L'url n'est pas valide");
     response.data = false;
   };
@@ -40,7 +41,7 @@ const addUrl = (body, done) => {
       done(response);
     });
   } else {
-    console.log(url.id);
+    console.log(url.userId);
     done(response);
   }
 };
